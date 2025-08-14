@@ -30,10 +30,10 @@
                       id="feature-1-heading"
                       class="text-xl font-semibold"
                     >
-                      1. Show/Hide Content Feature
+                      Show/Hide Content Feature
                     </h3>
                     <UBadge
-                      color="gray"
+                      :color="`${enabledDiscount ? 'primary' : 'error'}`"
                       :label=" `Status: ${enabledDiscount ? 'Enabled' : 'Disabled'}`"
                     />
                   </div>
