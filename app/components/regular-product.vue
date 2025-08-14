@@ -65,21 +65,21 @@
       </li>
     </ul>
 
-    <div class="mt-6">
-      <UButton
-        variant="solid"
-        size="lg"
-        class="w-full md:w-auto"
-      >
-        Buy Now
-      </UButton>
-      <p class="mt-2 text-xs text-slate-400">
-        No credit card required. Cancel anytime.
-      </p>
-    </div>
+    <UButton
+      variant="solid"
+      size="lg"
+      block
+      class="mt-6"
+    >
+      Buy Now
+    </UButton>
+
+    <p class="mt-2 text-xs text-center sm:text-left text-slate-400">
+      No credit card required. Cancel anytime.
+    </p>
 
     <!-- Trusted by -->
-    <div class="mt-2 text-xs text-slate-400">
+    <div class="mt-2 text-xs text-center sm:text-left text-slate-400">
       Trusted by 1,000+ startups and enterprises worldwide.
     </div>
   </section>

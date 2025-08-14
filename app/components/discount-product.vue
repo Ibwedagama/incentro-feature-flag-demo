@@ -84,21 +84,21 @@
     </ul>
 
     <!-- Buttons -->
-    <div class="mt-6 flex flex-col sm:flex-row gap-3">
-      <UButton
-        color="neutral"
-        variant="solid"
-        size="xl"
-        class="text-white font-semibold"
-      >
-        Buy Now
-      </UButton>
-    </div>
 
-    <p class="mt-2 text-xs text-pink-100">
+    <UButton
+      color="neutral"
+      variant="solid"
+      size="xl"
+      block
+      class="mt-6 mx-auto text-white font-semibold"
+    >
+      Buy Now
+    </UButton>
+
+    <p class="mt-2 text-xs text-center sm:text-left text-pink-100">
       Upgrade now and save $360/year. Risk-free 30-day guarantee.
     </p>
-    <div class="mt-2 text-xs text-pink-100 opacity-90">
+    <div class="mt-2 text-xs text-center sm:text-left text-pink-100 opacity-90">
       Trusted by 1,000+ startups and enterprises worldwide.
     </div>
   </section>
