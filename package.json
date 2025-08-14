@@ -14,6 +14,7 @@
     "@nuxt/scripts": "0.11.10",
     "@nuxt/ui": "3.3.0",
     "@unhead/vue": "^2.0.14",
+    "@unleash/proxy-client-vue": "^0.1.5",
     "eslint": "^9.33.0",
     "nuxt": "^4.0.3",
     "tailwindcss": "^4.1.11",
