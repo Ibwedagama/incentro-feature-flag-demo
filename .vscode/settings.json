@@ -9,5 +9,33 @@
   "tailwindCSS.experimental.classRegex": [
     ["ui:\\s*{([^)]*)\\s*}", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
   ],
-  "prettier.enable": false
+  "prettier.enable": false,
+
+  // Do not run the generic formatter first
+  "editor.formatOnSave": false,
+
+  // Let ESLint apply fixes on save
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+
+  // Flat config is used by Nuxt ESLint module
+  "eslint.useFlatConfig": true,
+
+  // Make ESLint the default formatter for code files
+  "[vue]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.formatOnSave": true
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.formatOnSave": true
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.formatOnSave": true
+  },
+
+  // Ensure ESLint actually runs for these languages
+  "eslint.validate": ["vue", "javascript", "typescript", "javascriptreact", "typescriptreact"]
 }
