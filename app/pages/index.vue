@@ -25,7 +25,7 @@
             <article aria-labelledby="feature-1-heading">
               <UCard>
                 <template #header>
-                  <div class="flex items-center justify-between">
+                  <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
                     <h3
                       id="feature-1-heading"
                       class="text-xl font-semibold"
@@ -39,29 +39,25 @@
                   </div>
                 </template>
 
-                <div class="space-y-4">
+                <div class="space-y-6">
                   <p class="text-gray-600">
                     Feature Flag:
                     <code class="bg-gray-100 px-2 py-1 rounded">discount-banner</code>
                   </p>
 
-                  <!-- Regular Price Banner (to be shown/hidden) -->
+                  <!-- Regular Price Banner -->
                   <section
                     aria-labelledby="regular-price-heading"
                     class="p-6 bg-gradient-to-r from-slate-700 to-slate-900 rounded-lg text-white"
                   >
-                    <div class="flex items-center justify-between">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
                       <div class="flex items-center gap-4">
-                        <div
-                          class="w-16 h-16 bg-white/10 rounded-lg flex items-center justify-center"
-                          aria-hidden="true"
-                        >
+                        <div class="w-16 h-16 bg-white/10 rounded-lg flex items-center justify-center">
                           <svg
                             class="w-8 h-8 text-white"
                             fill="none"
                             stroke="currentColor"
                             viewBox="0 0 24 24"
-                            aria-hidden="true"
                           >
                             <path
                               stroke-linecap="round"
@@ -79,11 +75,11 @@
                             Premium Pro Package
                           </h4>
                           <p class="text-slate-300">
-                            Everything you need to scale your business
+                            Everything you need to scale your SaaS business
                           </p>
                         </div>
                       </div>
-                      <div class="text-right">
+                      <div class="text-left md:text-right">
                         <div class="text-3xl font-bold">
                           $99
                         </div>
@@ -92,53 +88,28 @@
                         </div>
                       </div>
                     </div>
-                    <ul class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
-                      <li class="flex items-center gap-2 text-sm">
-                        <svg
-                          class="w-4 h-4 text-green-400"
-                          fill="currentColor"
-                          viewBox="0 0 20 20"
-                          aria-hidden="true"
-                        >
-                          <path
-                            fill-rule="evenodd"
-                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                            clip-rule="evenodd"
-                          />
-                        </svg>
-                        Unlimited Projects
+
+                    <ul class="mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 text-sm">
+                      <li class="flex items-center gap-2">
+                        <CheckIcon class="text-green-400" /> Unlimited Projects
                       </li>
-                      <li class="flex items-center gap-2 text-sm">
-                        <svg
-                          class="w-4 h-4 text-green-400"
-                          fill="currentColor"
-                          viewBox="0 0 20 20"
-                          aria-hidden="true"
-                        >
-                          <path
-                            fill-rule="evenodd"
-                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                            clip-rule="evenodd"
-                          />
-                        </svg>
-                        24/7 Support
+                      <li class="flex items-center gap-2">
+                        <CheckIcon class="text-green-400" /> 24/7 Support
                       </li>
-                      <li class="flex items-center gap-2 text-sm">
-                        <svg
-                          class="w-4 h-4 text-green-400"
-                          fill="currentColor"
-                          viewBox="0 0 20 20"
-                          aria-hidden="true"
-                        >
-                          <path
-                            fill-rule="evenodd"
-                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                            clip-rule="evenodd"
-                          />
-                        </svg>
-                        Advanced Analytics
+                      <li class="flex items-center gap-2">
+                        <CheckIcon class="text-green-400" /> Advanced Analytics
+                      </li>
+                      <li class="flex items-center gap-2">
+                        <CheckIcon class="text-green-400" /> API & Integrations
+                      </li>
+                      <li class="flex items-center gap-2">
+                        <CheckIcon class="text-green-400" /> Enterprise Security
+                      </li>
+                      <li class="flex items-center gap-2">
+                        <CheckIcon class="text-green-400" /> Team Collaboration Tools
                       </li>
                     </ul>
+
                     <div class="mt-6">
                       <UButton
                         color="white"
@@ -148,36 +119,31 @@
                       >
                         Get Started
                       </UButton>
+                      <p class="mt-2 text-xs text-slate-400">
+                        No credit card required. Cancel anytime.
+                      </p>
+                    </div>
+
+                    <!-- Trusted by -->
+                    <div class="mt-6 text-xs text-slate-400">
+                      Trusted by 1,000+ startups and enterprises worldwide.
                     </div>
                   </section>
 
-                  <!-- Discounted Price Banner (to be shown/hidden) -->
+                  <!-- Discounted Price Banner -->
                   <section
                     aria-labelledby="discount-price-heading"
-                    class="p-6 bg-gradient-to-r from-emerald-400 to-teal-500 rounded-lg text-white relative overflow-hidden"
+                    class="relative p-4 sm:p-6 bg-gradient-to-br from-pink-500 via-red-500 to-orange-400 rounded-lg text-white overflow-hidden shadow-lg"
                   >
-                    <!-- Discount Badge -->
-                    <div
-                      class="absolute top-4 right-4"
-                      aria-label="Discount offer"
-                    >
-                      <div class="bg-white text-emerald-700 px-3 py-1 rounded-full text-sm font-bold shadow-sm">
-                        30% OFF
-                      </div>
-                    </div>
-
-                    <div class="flex items-center justify-between">
-                      <div class="flex items-center gap-4">
-                        <div
-                          class="w-16 h-16 bg-white/20 rounded-lg flex items-center justify-center"
-                          aria-hidden="true"
-                        >
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 sm:gap-6">
+                      <!-- Left: Info -->
+                      <div class="flex items-start sm:items-center gap-3 sm:gap-4">
+                        <div class="w-12 h-12 sm:w-16 sm:h-16 bg-white/20 rounded-lg flex items-center justify-center shrink-0">
                           <svg
-                            class="w-8 h-8 text-white"
+                            class="w-6 h-6 sm:w-8 sm:h-8 text-white"
                             fill="none"
                             stroke="currentColor"
                             viewBox="0 0 24 24"
-                            aria-hidden="true"
                           >
                             <path
                               stroke-linecap="round"
@@ -190,40 +156,34 @@
                         <div>
                           <h4
                             id="discount-price-heading"
-                            class="text-2xl font-bold mb-1"
+                            class="text-lg sm:text-2xl font-bold mb-1"
                           >
                             Premium Pro Package
                           </h4>
-                          <p class="text-emerald-100">
-                            💚 Limited Time Special Offer!
+                          <p class="text-pink-100 text-sm sm:text-base">
+                            🔥 Limited Time Special Offer — Perfect for scaling teams!
                           </p>
                         </div>
                       </div>
-                      <div class="text-right">
-                        <div
-                          class="text-xl line-through text-emerald-200 opacity-70 mb-1"
-                          aria-label="Original price"
-                        >
+
+                      <!-- Right: Prices -->
+                      <div class="text-left md:text-right">
+                        <div class="text-base sm:text-xl line-through text-white opacity-70 mb-1">
                           $99
                         </div>
-                        <div
-                          class="text-4xl font-black text-white bg-white/20 px-3 py-1 rounded-lg inline-block"
-                          aria-label="Discounted price"
-                        >
+                        <div class="text-3xl sm:text-5xl font-black text-white rounded-lg inline-block shadow-md">
                           $69
                         </div>
-                        <div class="text-emerald-100 mt-1">
+                        <div class="text-pink-100 mt-1 text-sm">
                           per month
                         </div>
                       </div>
                     </div>
 
-                    <aside
-                      class="mt-4 p-3 bg-white/15 rounded-lg border border-white/20"
-                      aria-label="Offer timer"
-                    >
-                      <div class="flex items-center justify-between text-sm">
-                        <span class="text-emerald-100">⏰ Offer expires in:</span>
+                    <!-- Offer Timer -->
+                    <aside class="mt-4 p-3 bg-white/15 rounded-lg border border-white/20 text-xs sm:text-sm">
+                      <div class="flex items-center justify-between">
+                        <span class="text-pink-100">⏰ Offer expires in:</span>
                         <time
                           class="font-mono font-bold text-white"
                           datetime="P2DT14H23M"
@@ -231,71 +191,54 @@
                       </div>
                     </aside>
 
-                    <ul class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
-                      <li class="flex items-center gap-2 text-sm">
-                        <svg
-                          class="w-4 h-4 text-white"
-                          fill="currentColor"
-                          viewBox="0 0 20 20"
-                          aria-hidden="true"
-                        >
-                          <path
-                            fill-rule="evenodd"
-                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                            clip-rule="evenodd"
-                          />
-                        </svg>
-                        Unlimited Projects
+                    <!-- Feature List -->
+                    <ul class="mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 sm:gap-3 text-xs sm:text-sm">
+                      <li class="flex items-center gap-2">
+                        <CheckIcon class="text-white" /> Unlimited Projects
                       </li>
-                      <li class="flex items-center gap-2 text-sm">
-                        <svg
-                          class="w-4 h-4 text-white"
-                          fill="currentColor"
-                          viewBox="0 0 20 20"
-                          aria-hidden="true"
-                        >
-                          <path
-                            fill-rule="evenodd"
-                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                            clip-rule="evenodd"
-                          />
-                        </svg>
-                        24/7 Priority Support
+                      <li class="flex items-center gap-2">
+                        <CheckIcon class="text-white" /> 24/7 Priority Support
                       </li>
-                      <li class="flex items-center gap-2 text-sm">
-                        <svg
-                          class="w-4 h-4 text-white"
-                          fill="currentColor"
-                          viewBox="0 0 20 20"
-                          aria-hidden="true"
-                        >
-                          <path
-                            fill-rule="evenodd"
-                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                            clip-rule="evenodd"
-                          />
-                        </svg>
-                        Advanced Analytics + AI
+                      <li class="flex items-center gap-2">
+                        <CheckIcon class="text-white" /> Advanced Analytics + AI
+                      </li>
+                      <li class="flex items-center gap-2">
+                        <CheckIcon class="text-white" /> 50+ Integrations
+                      </li>
+                      <li class="flex items-center gap-2">
+                        <CheckIcon class="text-white" /> Dedicated Account Manager
+                      </li>
+                      <li class="flex items-center gap-2">
+                        <CheckIcon class="text-white" /> Early Access to New Features
                       </li>
                     </ul>
 
-                    <div class="mt-6 flex gap-3">
+                    <!-- Buttons -->
+                    <div class="mt-6 flex flex-col sm:flex-row gap-3">
                       <UButton
                         color="white"
                         variant="solid"
                         size="lg"
-                        class="flex-1 md:flex-none text-emerald-700 font-semibold"
+                        class="w-full sm:flex-1 text-pink-700 font-semibold"
                       >
-                        💚 Claim Discount
+                        🎁 Claim Discount
                       </UButton>
                       <UButton
                         color="white"
                         variant="outline"
                         size="lg"
-                        class="border-white/30 hover:bg-white/10"
+                        class="w-full sm:w-auto border-white/30 hover:bg-white/10"
                       >
                         Learn More
                       </UButton>
+                    </div>
+
+                    <p class="mt-2 text-xs text-pink-100">
+                      Upgrade now and save $360/year. Risk-free 30-day guarantee.
+                    </p>
+
+                    <div class="mt-6 text-xs text-pink-100 opacity-90">
+                      Trusted by 1,000+ startups and enterprises worldwide.
                     </div>
                   </section>
                 </div>
@@ -309,48 +252,4 @@
 </template>
 
 <script setup lang="ts">
-import type { User } from '~/types/user'
-
-// Sample users for testing different contexts
-const users: User[] = [
-  {
-    userId: '1',
-    email: 'john@example.com',
-    userGroup: 'regular',
-    country: 'US',
-  },
-  { userId: '2', email: 'sarah@example.com', userGroup: 'beta', country: 'UK' },
-  {
-    userId: '3',
-    email: 'mike@example.com',
-    userGroup: 'premium',
-    country: 'CA',
-  },
-  {
-    userId: '4',
-    email: 'alice@example.com',
-    userGroup: 'regular',
-    country: 'AU',
-  },
-]
-
-const selectedUser = ref<User>(users[0])
-
-// User selection
-const selectUser = (user: User) => {
-  selectedUser.value = user
-  // You can add your flag evaluation logic here
-}
-
-// Helper functions
-const getBadgeColor = (userGroup: string) => {
-  switch (userGroup) {
-    case 'premium':
-      return 'purple'
-    case 'beta':
-      return 'blue'
-    default:
-      return 'gray'
-  }
-}
 </script>
