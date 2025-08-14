@@ -21,12 +21,14 @@
             <code class="bg-gray-100 px-2 py-1 rounded">hero-section</code>
           </p>
 
-          <HeroVariantA v-if="variant?.name === 'versionA' && !isLoading" />
-          <HeroVariantB v-if="variant?.name === 'versionB' && !isLoading" />
-          <HeroVariantC v-if="variant?.name === 'versionC' && !isLoading" />
-          <HeroVariantD v-if="variant?.name === 'versionD' && !isLoading" />
+          <template v-if="!props.isLoading">
+            <HeroVariantA v-if="variant?.name === 'versionA'" />
+            <HeroVariantB v-if="variant?.name === 'versionB'" />
+            <HeroVariantC v-if="variant?.name === 'versionC'" />
+            <HeroVariantD v-if="variant?.name === 'versionD'" />
+          </template>
           <div
-            v-if="isLoading"
+            v-else
             class="w-full min-h-[420px] bg-gray-200 rounded-xl"
           />
         </div>

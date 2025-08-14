@@ -29,6 +29,6 @@ onMounted(() => {
   client.start()
   setTimeout(() => {
     isLoading.value = false
-  }, 500)
+  }, 1000)
 })
 </script>

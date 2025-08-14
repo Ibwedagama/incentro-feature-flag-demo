@@ -11,7 +11,7 @@
         </div>
 
         <!-- Navigation Links -->
-        <div class="flex items-center gap-6">
+        <div class="hidden sm:flex items-center gap-6">
           <NuxtLink
             to="/"
             class="text-gray-600 hover:text-gray-900 transition-colors"
@@ -25,13 +25,6 @@
             active-class="text-blue-600 font-medium"
           >
             A/B Testing
-          </NuxtLink>
-          <NuxtLink
-            to="/custom-context"
-            class="text-gray-600 hover:text-gray-900 transition-colors"
-            active-class="text-blue-600 font-medium"
-          >
-            Custom Context
           </NuxtLink>
         </div>
       </div>
